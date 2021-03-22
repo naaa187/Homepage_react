@@ -9,7 +9,7 @@ import {
   Col
 } from "reactstrap";
 
-class Projects extends React.Component {
+class Projects_eng extends React.Component {
   state = {};
   componentDidMount() {
     document.documentElement.scrollTop = 0;
@@ -72,4 +72,4 @@ class Projects extends React.Component {
   }
 }
 
-export default Projects;
+export default Projects_eng;

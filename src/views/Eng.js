@@ -18,7 +18,7 @@
 import React from "react";
 // core components
 import Home from "./demos/Home.js"
-import Projects from "./demos/Projects.js"
+import Projects_eng from "./demos/Projects.js"
 import AboutUs from "./demos/AboutUs.js"
 import Contact from "./demos/Contact.js"
 import SimpleFooter from "components/Footers/SimpleFooter.js";
@@ -42,7 +42,7 @@ var Link = Scroll.Link;
 var Element = Scroll.Element;
 var scroll = Scroll.animateScroll;
 
-class New extends React.Component {
+class Eng extends React.Component {
   
   componentDidMount() {
     document.documentElement.scrollTop = 0;
@@ -143,7 +143,7 @@ class New extends React.Component {
         <AboutUs/>
         </Element>
         <Element name="Container3">
-          <Projects />
+          <Projects_eng />
         </Element>
         <Element name="Container4">
           <Contact />
@@ -155,4 +155,4 @@ class New extends React.Component {
   }
 }
 
-export default New;
+export default Eng;
