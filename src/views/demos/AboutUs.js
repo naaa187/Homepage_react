@@ -33,7 +33,7 @@ class AboutUs extends React.Component {
     return (
       <>
         <main className="profile-page" ref="main">
-          <section className="section section-lg">
+          <section className="section section-lg bg-secondary">
             <Container>
               <Row className="justify-content-md-center my-9">
                 <Col className="mb-5 mb-lg-0" lg="3" md="6">

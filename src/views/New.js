@@ -17,15 +17,12 @@
 */
 import React from "react";
 // core components
-import DemoNavbar from "components/Navbars/DemoNavbar.js";
-import CardsFooter from "components/Footers/CardsFooter.js";
-
-// index page sections
-import Carousel from "./IndexSections/Carousel.js";
 import Home from "./demos/Home.js"
 import Projects from "./demos/Projects.js"
-
-import { Link } from "react-router-dom";
+import AboutUs from "./demos/AboutUs.js"
+import Contact from "./demos/Contact.js"
+import SimpleFooter from "components/Footers/SimpleFooter.js";
+//import { Link } from "react-router-dom";
 // JavaScript plugin that hides or shows a component based on your scroll
 import Headroom from "headroom.js";
 // reactstrap components
@@ -39,8 +36,11 @@ import {
   Nav,
   Container,
 } from "reactstrap";
+import * as Scroll from 'react-scroll';
 
-
+var Link = Scroll.Link;
+var Element = Scroll.Element;
+var scroll = Scroll.animateScroll;
 
 class New extends React.Component {
   
@@ -71,14 +71,14 @@ class New extends React.Component {
       collapseClasses: ""
     });
   };
-
+  
   render() {
-    const {homelo,prolo,aboutlo} = this.state;
+
     return (
       <>
         <header className="header-global">
           <Navbar
-            className="navbar-main navbar-transparent navbar-light headroom"
+            className="navbar-main navbar-transparent headroom"
             expand="lg"
             id="navbar-main"
           >
@@ -95,20 +95,20 @@ class New extends React.Component {
                 className={this.state.collapseClasses}
                 onExiting={this.onExiting}
                 onExited={this.onExited}>
-                <Nav className="ml-lg-auto" navbar>
+                <Nav className="ml-lg-auto " navbar>
                   <NavItem>
-                    <NavLink href="#pablo" onClick={homelo.scrollIntoView({ behavior: "smooth"})}>
+                    <NavLink href="#pablo" onClick={()=> scroll.scrollTo(0,0)}>
                     Home <span className="sr-only">(current)</span>
                     </NavLink>
                   </NavItem>
                   <NavItem>
-                    <NavLink  href="#pablo" onClick={e => e.preventDefault()}>About Us</NavLink>
+                  <NavLink  href="#pablo" onClick={()=> scroll.scrollTo(650,0)}>About Us</NavLink>
                   </NavItem>
                   <NavItem>
-                    <NavLink  href="#pablo" onClick={e => e.preventDefault()}>Projects</NavLink>
+                    <NavLink  href="#pablo" onClick={()=> scroll.scrollTo(1280,0)}>Projects</NavLink>
                   </NavItem>
                   <NavItem>
-                    <NavLink  href="#pablo" onClick={e => e.preventDefault()}>Contact</NavLink>
+                    <NavLink  href="#pablo" onClick={()=> scroll.scrollTo(2350,0)}>Contact</NavLink>
                   </NavItem>
                   <NavItem>
                     <NavLink
@@ -136,11 +136,20 @@ class New extends React.Component {
           </Navbar>
         </header>
         <main ref="main">
-          <Home ref="homelo"/>
-          <Projects id="#project"/>
-          <Carousel id="#about"/>
+        <Element name="Container1">
+          <Home />
+        </Element>
+        <Element name="Container2">
+        <AboutUs/>
+        </Element>
+        <Element name="Container3">
+          <Projects />
+        </Element>
+        <Element name="Container4">
+          <Contact />
+        </Element>
         </main>
-        <CardsFooter />
+        <SimpleFooter/>
       </>
     );
   }

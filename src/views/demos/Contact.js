@@ -1,28 +1,9 @@
-/*!
-
-=========================================================
-* Argon Design System React - v1.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-design-system-react
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-design-system-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 
 // reactstrap components
 import { Button, Card, Container, Row, Col, CardImg, CardBody, Badge } from "reactstrap";
 
 // core components
-import DemoNavbar from "components/Navbars/DemoNavbar.js";
-import SimpleFooter from "components/Footers/SimpleFooter.js";
 
 class AboutUs extends React.Component {
   componentDidMount() {
@@ -33,14 +14,13 @@ class AboutUs extends React.Component {
   render() {
     return (
       <>
-
         <main className="profile-page" ref="main">
-            <div className="text-center">
-                <h1 className="display-3">Contact Us</h1>
-              </div>
-          <section className="footer has-cards">
-            <Container>
-              <Row className="justify-content-center align-items-start">
+          <section className="footer has-cards section-lg">
+          <Container>
+              <Row className="text-center justify-content-center align-items-start">
+                <Col lg="10">
+                  <h1 className="display-3">Contact Us</h1>
+                </Col>
                 <Col className="mb-5 mb-md-0" md="5">
                   <Card className="shadow border-0">
                     <CardBody className="py-5 text-center">
@@ -130,12 +110,9 @@ class AboutUs extends React.Component {
                   </Card>
                 </Col>
               </Row>
-              <Row className="my-6">
-              </Row> 
             </Container>
           </section>
         </main>
-        <SimpleFooter />
       </>
     );
   }

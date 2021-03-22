@@ -25,7 +25,6 @@ import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import CardsFooter from "components/Footers/CardsFooter.js";
 
 // index page sections
-import Carousel from "./IndexSections/Carousel.js";
 import Home from "./demos/Home.js"
 import Projects from "./demos/Projects.js"
 import AboutUs from "views/demos/AboutUs"
