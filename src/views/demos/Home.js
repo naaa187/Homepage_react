@@ -22,12 +22,9 @@ class Home extends React.Component {
         <main ref="main">
           <div className="position-relative">
             {/* shape Hero */}
-            <section className="section section-hero bg-gradient-purple section-shaped ">
+            <section className="section section-hero section-shaped">
             {/* Background circles */}
-
-              <Container className="shape-container d-flex align-items-center py-lg ">
-                <div className="col px-0">
-                <Row className="align-items-center justify-content-center">
+              <Container className="shape-container page-header">
                   <Col className="text-center" lg="6">
                     <img
                       alt="..."
@@ -35,12 +32,8 @@ class Home extends React.Component {
                       src={require("assets/img/brand/BEYOND_main.png")}
                       style={{ width: "400px" }}
                     />
-                    <p className="display-4 text-white">
-                     블록체인 변혁의 새로운 커뮤니티
-                    </p>
+                    <p className="h4 text-white">블록체인 변혁의 새로운 커뮤니티</p>
                   </Col>
-                </Row>
-                </div>
               </Container>
               {/* SVG separator */}
               <div className="separator separator-bottom separator-skew">

@@ -15,13 +15,17 @@ class AboutUs extends React.Component {
     return (
       <>
         <main className="profile-page" ref="main">
+          <div>
+          <Row className="text-center justify-content-center align-items-start">
+                <Col lg="10">
+                  <h1 className="display-3 mt-7">Contact Us</h1>
+                </Col>
+          </Row>
+          </div> 
           <section className="footer has-cards section-lg">
           <Container>
               <Row className="text-center justify-content-center align-items-start">
-                <Col lg="10">
-                  <h1 className="display-3">Contact Us</h1>
-                </Col>
-                <Col className="mb-5 mb-md-0" md="5">
+                <Col className="mb-9 mb-md-0" md="5">
                   <Card className="shadow border-0">
                     <CardBody className="py-5 text-center">
                       <img

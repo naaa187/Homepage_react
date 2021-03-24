@@ -12326,7 +12326,7 @@ a.btn-icon-only {
 .footer.has-cards {
   overflow: hidden;
   padding-top: 500px;
-  margin-top: -420px;
+  margin-top: -450px;
   position: relative;
   background: transparent;
   pointer-events: none; }
@@ -13458,7 +13458,10 @@ textarea[resize="horizontal"] {
 
 @media (min-width: 768px) {
   .section-hero {
-    min-height: 500px; } }
+    min-height: 110vh;
+    background: center ;
+    background-image:url(../img/ill/galaxy.jpg);
+    background-size: cover} }
 
 .section-shaped {
   position: relative;
@@ -16026,8 +16029,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .btn-clipboard {
   top: 3.5rem; }
 
-.offline-doc .page-header {
-  height: 100vh;
+.page-header {
+  height: 85vh;
   display: flex;
   justify-content: center;
   align-items: center; }

@@ -41,7 +41,7 @@ class AboutUs extends React.Component {
                   <img
                       alt="..."
                       className="img-center img-fluid"
-                      src={require("assets/img/brand/ewha-chain-logo.jpg")}
+                      src={require("assets/img/brand/ewha-chain-logo.png")}
                   />
                   </div>
                 </Col>
@@ -62,13 +62,13 @@ class AboutUs extends React.Component {
                   <h4 className="display-3">B
                     <small className="text muted">lockchain{" "}</small>
                   </h4>
-                  <h4 className="display-3">E
+                  <h4 className="display-3"> E
                     <small className="text muted">wha</small>
                   </h4>
-                  <h4 className="display-3">Y
+                  <h4 className="display-3"> Y
                     <small className="text muted">onsei</small>
                   </h4>
-                  <h4 className="display-3">OND</h4>
+                  <h4 className="display-3"> OND</h4>
                   <p className="text-gray">
                     지속적으로 변경되는 데이터를 모든 참여 노드에 기록한 변경 리스트로서 분산 노드의 운영자에 의한 임의 조작이 불가능하도록 고안되었다.
                   </p>
