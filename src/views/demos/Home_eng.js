@@ -1,15 +1,12 @@
 import React from "react";
-// nodejs library that concatenates classes
-import classnames from "classnames";
 
 // reactstrap components
 import {
   Container,
-  Row,
   Col
 } from "reactstrap";
 
-class Home extends React.Component {
+class Home_eng extends React.Component {
   state = {};
   componentDidMount() {
     document.documentElement.scrollTop = 0;
@@ -32,7 +29,7 @@ class Home extends React.Component {
                       src={require("assets/img/brand/BEYOND_main.png")}
                       style={{ width: "400px" }}
                     />
-                    <p className="h4 text-white">블록체인 변혁의 새로운 커뮤니티</p>
+                    <p className="h4 text-white">The future of blockchain community with combined universities</p>
                   </Col>
               </Container>
               {/* SVG separator */}
@@ -60,4 +57,4 @@ class Home extends React.Component {
   }
 }
 
-export default Home;
+export default Home_eng;

@@ -18,9 +18,11 @@
 import React from "react";
 
 // reactstrap components
-import {  Container, Row, Col } from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
 
-class AboutUs extends React.Component {
+// core components
+
+class AboutUs_eng extends React.Component {
   componentDidMount() {
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
@@ -67,7 +69,7 @@ class AboutUs extends React.Component {
                   </h4>
                   <h4 className="display-3"> OND</h4>
                   <p className="text-gray">
-                    지속적으로 변경되는 데이터를 모든 참여 노드에 기록한 변경 리스트로서 분산 노드의 운영자에 의한 임의 조작이 불가능하도록 고안되었다.
+                    blahblahblah
                   </p>
                 </div>
               </Col>
@@ -80,4 +82,4 @@ class AboutUs extends React.Component {
   }
 }
 
-export default AboutUs;
+export default AboutUs_eng;
