@@ -120,7 +120,7 @@ class New extends React.Component {
                   <NavItem>
                     <NavLink
                       className="nav-link-icon"
-                      href=""
+                      href="https://instagram.com/beyond_ewhayonsei?utm_medium=copy_link"
                       id="tooltip356693867"
                       target="_blank">
                       <i className="fa fa-instagram" />
