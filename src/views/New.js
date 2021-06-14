@@ -6,7 +6,8 @@ import Projects from "./demos/Projects.js"
 import AboutUs from "./demos/AboutUs.js"
 import Contact from "./demos/Contact.js"
 import SimpleFooter from "components/Footers/SimpleFooter.js";
-
+import Profile_Flow from "./demos/profile_flow.js"
+import Profile_Celo from "./demos/profile_celo.js"
 // JavaScript plugin that hides or shows a component based on your scroll
 import Headroom from "headroom.js";
 // reactstrap components
@@ -18,8 +19,11 @@ import {
   NavLink,
   Nav,
   Container,
+  Row,
+  Col
 } from "reactstrap";
 import * as Scroll from 'react-scroll';
+import { Profiler } from "react";
 var Element = Scroll.Element;
 var scroll = Scroll.animateScroll;
 
@@ -48,7 +52,7 @@ class New extends React.Component {
       collapseClasses: ""
     });
   };
-  
+
   render() {
 
     return (
@@ -59,15 +63,14 @@ class New extends React.Component {
             expand="lg"
             id="navbar-main"
           >
+            
             <Container>
-              
               <NavbarBrand className="mr-lg-5">
                 <NavLink onClick={()=> scroll.scrollTo(0,0)}>
                   <img 
                     alt="..." 
                     src={require("assets/img/brand/BEYOND_trans3.png")} />
                 </NavLink>
-
               </NavbarBrand>
               <button className="navbar-toggler" id="navbar_global">
                 <span className="navbar-toggler-icon" />
@@ -78,10 +81,28 @@ class New extends React.Component {
                 className={this.state.collapseClasses}
                 onExiting={this.onExiting}
                 onExited={this.onExited}>
+                <div className="navbar-collapse-header">
+                  <Row>
+                    <Col className="collapse-brand" xs="6">
+                      <Link to="/">
+                        <img
+                          alt="..."
+                          src={require("assets/img/brand/BEYOND_trans.png")}
+                        />
+                      </Link>
+                    </Col>
+                    <Col className="collapse-close" xs="6">
+                      <button className="navbar-toggler" id="navbar_global">
+                        <span />
+                        <span />
+                      </button>
+                    </Col>
+                  </Row>
+                </div>
                 <Nav className="ml-lg-auto " navbar>
                   <NavItem>
                     <NavLink onClick={()=> scroll.scrollTo(0,0)}>
-                    Home <span className="sr-only">(current)</span>
+                      Home <span className="sr-only">(current)</span>
                     </NavLink>
                   </NavItem>
                   <NavItem>
@@ -91,7 +112,10 @@ class New extends React.Component {
                     <NavLink onClick={()=> scroll.scrollTo(1320,0)}>Projects</NavLink>
                   </NavItem>
                   <NavItem>
-                    <NavLink onClick={()=> scroll.scrollTo(2420,0)}>Contact</NavLink>
+                    <NavLink onClick={()=> scroll.scrollTo(2420,0)}>Member</NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink onClick={()=> scroll.scrollTo(4120,0)}>Contact</NavLink>
                   </NavItem>
                   <NavItem>
                     <NavLink
@@ -136,9 +160,16 @@ class New extends React.Component {
         <Element name="Container3">
           <Projects />
         </Element>
+        <Element name="Container5">
+          <Profile_Celo/>
+        </Element>
+        <Element name="Container5">
+          <Profile_Flow/>
+        </Element>
         <Element name="Container4">
           <Contact />
         </Element>
+        
         </main>
         <SimpleFooter/>
       </>
