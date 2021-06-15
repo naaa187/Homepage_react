@@ -29,6 +29,22 @@ export default class Profile_Celo extends React.Component {
                     <img
                       alt="..."
                       className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
+                      src={require("assets/img/theme/김나연_사이버보안전공_Nayeon Kim_CyberSecurity.jfif")}
+                      style={{ width: "200px" }}
+                    />
+                    <div className="pt-4 text-center">
+                      <h5 className="title">
+                        <span className="d-block mb-1">Nayeon Kim</span>
+                        <small className="h6 text-muted">Cyber Security</small>
+                      </h5>
+                    </div>
+                  </div>
+                </Col>
+                <Col className="mb-5 mb-lg-0" lg="3" md="6">
+                  <div className="px-4">
+                    <img
+                      alt="..."
+                      className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
                       src={require("assets/img/theme/김채린_컴퓨터공학과 _ Chaerin Kim.jpg")}
                       style={{ width: "200px" }}
                     />

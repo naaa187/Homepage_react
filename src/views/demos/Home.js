@@ -30,7 +30,10 @@ class Home extends React.Component {
                       alt="..."
                       className="img-fluid"
                       src={require("assets/img/brand/BEYOND_main.png")}
-                      style={{ width: "400px" }}
+                      style={{ 
+                        width: "100%",
+                        height: "auto",
+                      }}
                     />
                     <p className="h4 text-white">블록체인 변혁의 새로운 커뮤니티</p>
                   </Col>

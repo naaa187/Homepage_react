@@ -13456,12 +13456,11 @@ textarea[resize="horizontal"] {
   padding-top: 2rem;
   padding-bottom: 2rem; }
 
-@media (min-width: 768px) {
-  .section-hero {
-    min-height: 110vh;
-    background: center ;
-    background-image:url(../img/ill/galaxy.jpg);
-    background-size: cover} }
+.section-hero {
+  min-height: 110vh;
+  background: center ;
+  background-image:url(../img/ill/galaxy.jpg);
+  background-size: cover; }
 
 .section-shaped {
   position: relative;
