@@ -36,10 +36,7 @@ class AboutUs extends React.Component {
                       />
                       <h6 className="text-primary text-uppercase">
                         Celo Team
-                          </h6>
-                      <p className="description mt-3">
-                        eocnd thrormf Tjwntpdy
-                          </p>
+                      </h6>
                       <div className="text-lg-center btn-wrapper">
                         <Button
                           className="btn-icon-only rounded-circle"
@@ -80,10 +77,7 @@ class AboutUs extends React.Component {
                       />
                       <h6 className="text-primary text-uppercase">
                         Flow Team
-                          </h6>
-                      <p className="description mt-3">
-                        eocnd thrormf Tjwntpdy
-                          </p>
+                      </h6>
                       <div className="text-lg-center btn-wrapper">
                         <Button
                           className="btn-icon-only rounded-circle"

@@ -1,33 +1,17 @@
-/*!
-
-=========================================================
-* Argon Design System React - v1.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-design-system-react
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-design-system-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
+import { Link } from "react-router-dom";
 // core components
-import Home from "./demos/Home.js"
-import Projects_eng from "./demos/Projects.js"
-import AboutUs from "./demos/AboutUs.js"
+import Home_eng from "./demos/Home_eng.js"
+import Projects_eng from "./demos/Projects_eng.js"
+import AboutUs_eng from "./demos/AboutUs_eng.js"
 import Contact from "./demos/Contact.js"
 import SimpleFooter from "components/Footers/SimpleFooter.js";
-//import { Link } from "react-router-dom";
+import Profile_Flow from "./demos/profile_flow_en.js"
+import Profile_Celo from "./demos/profile_celo_en.js"
 // JavaScript plugin that hides or shows a component based on your scroll
 import Headroom from "headroom.js";
 // reactstrap components
 import {
-  Button,
   UncontrolledCollapse,
   NavbarBrand,
   Navbar,
@@ -35,24 +19,20 @@ import {
   NavLink,
   Nav,
   Container,
+  Col,
+  Row
 } from "reactstrap";
 import * as Scroll from 'react-scroll';
-
-var Link = Scroll.Link;
 var Element = Scroll.Element;
 var scroll = Scroll.animateScroll;
 
-class Eng extends React.Component {
+class New extends React.Component {
   
   componentDidMount() {
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
     this.refs.main.scrollTop = 0;
     let headroom = new Headroom(document.getElementById("navbar-main"));
-    // initialise
-    /*this.setState({homelo: document.querySelector("#home").offsetTop,
-    projectlo: document.querySelector("#project").offsetTop, 
-    aboutlo: document.querySelector("#about").offsetTop});*/
     headroom.init();
   }
   state = {
@@ -78,13 +58,19 @@ class Eng extends React.Component {
       <>
         <header className="header-global">
           <Navbar
-            className="navbar-main navbar-transparent headroom"
+            className="navbar-main navbar-transparent navbar-light headroom"
             expand="lg"
             id="navbar-main"
           >
             <Container>
-              <NavbarBrand className="mr-lg-5" to="/" tag={Link}>
-                <img src={require("assets/img/brand/BEYOND_trans3.png")} alt="..."/>
+              
+              <NavbarBrand className="mr-lg-5">
+                <NavLink onClick={()=> scroll.scrollTo(0,0)}>
+                  <img 
+                    alt="..." 
+                    src={require("assets/img/brand/BEYOND_trans3.png")} />
+                </NavLink>
+
               </NavbarBrand>
               <button className="navbar-toggler" id="navbar_global">
                 <span className="navbar-toggler-icon" />
@@ -95,25 +81,46 @@ class Eng extends React.Component {
                 className={this.state.collapseClasses}
                 onExiting={this.onExiting}
                 onExited={this.onExited}>
+                <div className="navbar-collapse-header">
+                  <Row>
+                    <Col className="collapse-brand" xs="6">
+                      <Link to="/">
+                        <img
+                          alt="..."
+                          src={require("assets/img/brand/BEYOND_trans.png")}
+                        />
+                      </Link>
+                    </Col>
+                    <Col className="collapse-close" xs="6">
+                      <button className="navbar-toggler" id="navbar_global">
+                        <span />
+                        <span />
+                      </button>
+                    </Col>
+                  </Row>
+                </div>
                 <Nav className="ml-lg-auto " navbar>
                   <NavItem>
-                    <NavLink href="#pablo" onClick={()=> scroll.scrollTo(0,0)}>
+                    <NavLink onClick={()=> scroll.scrollTo(0,0)}>
                     Home <span className="sr-only">(current)</span>
                     </NavLink>
                   </NavItem>
                   <NavItem>
-                  <NavLink  href="#pablo" onClick={()=> scroll.scrollTo(650,0)}>About Us</NavLink>
+                  <NavLink  onClick={()=> scroll.scrollTo(650,0)}>About Us</NavLink>
                   </NavItem>
                   <NavItem>
-                    <NavLink  href="#pablo" onClick={()=> scroll.scrollTo(1280,0)}>Projects</NavLink>
+                    <NavLink onClick={()=> scroll.scrollTo(1320,0)}>Projects</NavLink>
                   </NavItem>
                   <NavItem>
-                    <NavLink  href="#pablo" onClick={()=> scroll.scrollTo(2350,0)}>Contact</NavLink>
+                    <NavLink onClick={()=> scroll.scrollTo(2420,0)}>Member</NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink onClick={()=> scroll.scrollTo(4120,0)}>Contact</NavLink>
                   </NavItem>
                   <NavItem>
                     <NavLink
                       className="nav-link-icon"
-                      href="https://www.instagram.com/creativetimofficial"
+                      href="https://instagram.com/beyond_ewhayonsei?utm_medium=copy_link"
                       id="tooltip356693867"
                       target="_blank">
                       <i className="fa fa-instagram" />
@@ -130,6 +137,14 @@ class Eng extends React.Component {
                       <span className="nav-link-inner--text d-lg-none ml-2">Github</span>
                     </NavLink>
                   </NavItem>
+                  <NavItem>
+                    <NavLink
+                      className="nav-link-icon"
+                      to= "/"
+                      tag={Link}>
+                      Kr
+                    </NavLink>
+                  </NavItem>
                 </Nav>
               </UncontrolledCollapse>
             </Container>
@@ -137,13 +152,19 @@ class Eng extends React.Component {
         </header>
         <main ref="main">
         <Element name="Container1">
-          <Home />
+          <Home_eng />
         </Element>
         <Element name="Container2">
-        <AboutUs/>
+        <AboutUs_eng/>
         </Element>
         <Element name="Container3">
           <Projects_eng />
+        </Element>
+        <Element name="Container5">
+          <Profile_Celo/>
+        </Element>
+        <Element name="Container5">
+          <Profile_Flow/>
         </Element>
         <Element name="Container4">
           <Contact />
@@ -155,4 +176,4 @@ class Eng extends React.Component {
   }
 }
 
-export default Eng;
+export default New;
